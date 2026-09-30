@@ -1,3 +1,5 @@
+package ListasCarrera;
+
 import java.util.Scanner;
 
 public class Main {
@@ -49,6 +51,7 @@ public class Main {
                     break;
             }
         }while(opc!=7);
+        leer.close();
     }
 
     public static void menu(){

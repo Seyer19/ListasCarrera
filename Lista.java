@@ -1,3 +1,5 @@
+package ListasCarrera;
+
 public class Lista { //Variables, constructor y metodos
     private Nodo inicio;    //Siempre apunta al primer elemento
     private Nodo fin;       //Apunta a la cola

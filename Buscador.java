@@ -1,3 +1,5 @@
+package ListasCarrera;
+
 public class Buscador {
     
     private Lista lista;

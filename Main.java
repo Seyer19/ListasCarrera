@@ -1,50 +1,46 @@
-package ListasCarrera;
-/*
-Participantes en una carrera de 10 km de recorrido: nombre,
-empresa que representan, búsqueda por nombre, búsqueda por empresa.
-Al terminar la carrera registran el lugar en el que quedo. Búsqueda por lugares,
-*/
-
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class main {
+    public static void main(String[] args){
+        String nombre;
+        String empresa;
+        int numero;
+        Scanner leer = new Scanner (System.in);
+        Lista grupo = new Lista();
+        int opc =0;
 
-        System.out.println("Trabajo en equipo Lista Corredores \n");
-
-        // PRUEBA TEMPORAL de agregar() y mostrar()
-        Lista carrera = new Lista();
-        carrera.agregar("Arath",  "Bimbo" , 2);
-        carrera.agregar("Pablo",  "Cemex" , 1);
-        carrera.agregar("Thiago",  "Pemex" ,  3);
-        carrera.mostrar();
-        // FIN DE LA PRUEBA
-        //Borrar la prueba y los /* */ para que crees el menu pablo
-        
-
-        /*
-        Scanner leer = new Scanner(System.in);
-        int opc = 0;
-
-        do {
+        do{
             menu();
-            System.out.println("Elige Opcion");
+            System.out.print("Elige una opcion: ");
             opc = Integer.parseInt(leer.nextLine());
-
-            switch (opc) {
+            switch (opc){
                 case 1:
-
+                        System.out.println("\nNombre del corredor: ");
+                        nombre = leer.nextLine();
+                        System.out.println("Nombre de la empresa: ");
+                        empresa = leer.nextLine();
+                        System.out.println("Lugar que quedo: ");
+                        numero = Integer.parseInt(leer.nextLine());
+                        grupo.agregar(nombre, empresa, numero);
+                    break;
+                case 2:
+                    System.out.println("Lista de corredores: ");
+                    grupo.mostrar();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
                     break;
             }
-
-        } while (opc != 7);
-
-        leer.close();
-        */
+        }while(opc!=7);
     }
 
-    public static void menu() {
-        System.out.println("Listas de Corredores\n");
+    public static void menu(){
+        System.out.println("\nTrabajo en equipo Lista Corredores \n");
         System.out.println("1. Agregar");
         System.out.println("2. Mostrar elementos");
         System.out.println("3. Buscar por nombre");

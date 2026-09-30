@@ -16,35 +16,35 @@ public class Main {
             opc = Integer.parseInt(leer.nextLine());
             switch (opc){
                 case 1:
-                        System.out.println("\nNombre del corredor: ");
-                        nombre = leer.nextLine();
-                        System.out.println("Nombre de la empresa: ");
-                        empresa = leer.nextLine();
-                        System.out.println("Lugar que quedo: ");
-                        numero = Integer.parseInt(leer.nextLine());
-                        grupo.agregar(nombre, empresa, numero);
+                    System.out.println("\nNombre del corredor: ");
+                    nombre = leer.nextLine();
+                    System.out.println("Nombre de la empresa: ");
+                    empresa = leer.nextLine();
+                    System.out.println("Lugar que quedo: ");
+                    numero = Integer.parseInt(leer.nextLine());
+                    grupo.agregar(nombre, empresa, numero);
                     break;
                 case 2:
-                    System.out.println("Lista de corredores: ");
+                    System.out.println("\nLista de corredores: ");
                     grupo.mostrar();
                     break;
                 case 3:
-                    System.out.println("Corredor: ");
+                    System.out.println("\nCorredor: ");
                     nombre = leer.nextLine();
                     buscador.buscar_Por_Nombre(nombre);
                     break;
                 case 4:
-                    System.out.println("Corredor: ");
+                    System.out.println("\nCorredor: ");
                     empresa = leer.nextLine();
                     buscador.buscar_Por_Empresa(empresa);
                     break;
                 case 5:
-                    System.out.println("Corredor: ");
+                    System.out.println("\nCorredor: ");
                     numero = Integer.parseInt(leer.nextLine());
                     buscador.buscar_por_Lugar(numero);
                     break;
                 case 6:
-                    System.out.println("Limpio! ");                    
+                    System.out.println("\nLimpio! ");                    
                     grupo.limpiar();
                     break;
             }

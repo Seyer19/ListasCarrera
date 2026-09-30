@@ -1,6 +1,3 @@
-package ListasCarrera;
-
-
 public class Lista { //Variables, constructor y metodos
     private Nodo inicio;    //Siempre apunta al primer elemento
     private Nodo fin;       //Apunta a la cola
@@ -35,13 +32,14 @@ public class Lista { //Variables, constructor y metodos
             inicio = nuevo;
             fin = nuevo;
         //Aqui se enlazan usando el fin, sin recorrer la lista ya que solo hay un metodo de agregar
-        }else{
+        } else {
             //Set next apunta a fin la cual iria hacia delante
             fin.setNext(nuevo);
             //Fin aqui sigue siendo el pasada pero se enlaza a fin = nuevo para que apunte al siguiente
             nuevo.setBack(fin);
             fin = nuevo;
         }
+        
 
     }
     //En el codigo dejo de existir new nodo porque el constructor en nodo solicita los 3 datos
@@ -50,8 +48,12 @@ public class Lista { //Variables, constructor y metodos
             System.out.println("\nNo hay elementos");
         }else{
             Nodo i = inicio;
+            // Posicion de ID
+            int posicion = 1;
             while(i!=null){
-                System.out.println("Nombre: "+ i.getNombre() + " Empresa: " + i.getEmpresa() + " Numero de corredor: " + i.getNumeroFin());
+                System.out.println("========= Corredor n. " + posicion + " =========");
+                System.out.println("Nombre: "+ i.getNombre() + "\nEmpresa: " + i.getEmpresa() + "\nNumero de corredor: " + i.getNumeroFin());
+                posicion++;
                 i = i.getNext();
             }
         }

@@ -1,5 +1,3 @@
-package ListasCarrera;
-
 public class Nodo {
    
     //Variables utilizadas para la clase corredor y poder conectar nodos

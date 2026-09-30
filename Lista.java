@@ -19,7 +19,7 @@ public class Lista { //Variables, constructor y metodos
     }
 
     public boolean vacia(){ //Sino tiene elementos, regresa true, porque estaria vacia
-        if (inicio ==null)
+        if (inicio == null)
             return true;
         else
             return false;
@@ -44,7 +44,7 @@ public class Lista { //Variables, constructor y metodos
         }
 
     }
-//En el codigo dejo de existir new nodo porque el constructor en nodo solicita los 3 datos
+    //En el codigo dejo de existir new nodo porque el constructor en nodo solicita los 3 datos
     public void mostrar(){
         if(vacia()){
             System.out.println("\nNo hay elementos");
@@ -56,4 +56,8 @@ public class Lista { //Variables, constructor y metodos
             }
         }
     }
+    
+    public void limpiar() {
+        inicio = fin = null;
+    }   
 }

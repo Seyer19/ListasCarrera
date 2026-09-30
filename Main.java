@@ -1,13 +1,14 @@
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args){
         String nombre;
         String empresa;
         int numero;
         Scanner leer = new Scanner (System.in);
         Lista grupo = new Lista();
-        int opc =0;
+        Buscador buscador = new Buscador(grupo);
+        int opc = 0;
 
         do{
             menu();
@@ -28,12 +29,23 @@ public class main {
                     grupo.mostrar();
                     break;
                 case 3:
+                    System.out.println("Corredor: ");
+                    nombre = leer.nextLine();
+                    buscador.buscar_Por_Nombre(nombre);
                     break;
                 case 4:
+                    System.out.println("Corredor: ");
+                    empresa = leer.nextLine();
+                    buscador.buscar_Por_Empresa(empresa);
                     break;
                 case 5:
+                    System.out.println("Corredor: ");
+                    numero = Integer.parseInt(leer.nextLine());
+                    buscador.buscar_por_Lugar(numero);
                     break;
                 case 6:
+                    System.out.println("Limpio! ");                    
+                    grupo.limpiar();
                     break;
             }
         }while(opc!=7);

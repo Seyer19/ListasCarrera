@@ -15,20 +15,13 @@ public class Nodo {
         this.empresa = empresa;
         this.numeroFin = numeroFin;
     }
-/* Por si se desea modificar el numero al acabar reactiven esta linea y para los otros datos es solo copiar y pegarla con otro nombre
-    //Para poder asignarle el numero final, al final ya que se queda como atributo
-    //Se asigna en 0 automaticamente al crear el nodo para al finalizar asignarle un numero adecuado
-     public void setNumeroFin(int variable){
-        numeroFin = variable;
-    }
-*/
 
     //Obtencion del dato dentro de nombre
     public  String getNombre(){
         return nombre;
     }
 
-    //Obtencion del dato dentro del numero final para cada corredor
+    //Obtencion del dato dentro del numero que quedaron
     public int getNumeroFin(){
         return numeroFin;
     }
